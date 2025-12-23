@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ff49ccef.css",
+    "main.js": "/static/js/main.d723c3cc.js",
+    "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
+    "static/media/CarDeformationVid.gif": "/static/media/CarDeformationVid.81caa8c6df7a447374ac.gif",
+    "static/media/FirstOrderDynamics (1).gif": "/static/media/FirstOrderDynamics (1).c25d30a5eaeede274742.gif",
+    "static/media/FirstOrderDynamics (3).gif": "/static/media/FirstOrderDynamics (3).65d3298fa76beae837d1.gif",
+    "static/media/FirstOrderDynamics (2).gif": "/static/media/FirstOrderDynamics (2).50e672bc50d80a1933d1.gif",
+    "static/media/TerrainEditor3.png": "/static/media/TerrainEditor3.e6fd1d0958d927a5ca5e.png",
+    "static/media/TerrainEditor1.png": "/static/media/TerrainEditor1.dc25fa81d227c8f7fd85.png",
+    "static/media/TerrainEditor2.png": "/static/media/TerrainEditor2.021221a0820b40dbe3ea.png",
+    "static/media/CarDeform1.png": "/static/media/CarDeform1.265dc0514614f5c9d304.png",
+    "static/media/CarDeform2.png": "/static/media/CarDeform2.f1090c1d6cec948eb9c0.png",
+    "index.html": "/index.html",
+    "main.ff49ccef.css.map": "/static/css/main.ff49ccef.css.map",
+    "main.d723c3cc.js.map": "/static/js/main.d723c3cc.js.map",
+    "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff49ccef.css",
+    "static/js/main.d723c3cc.js"
+  ]
+}
