@@ -18,24 +18,27 @@ export type Project = {
 export const projects: Project[] = [
     {
         title: "Second Order Dynamics",
-        description: "A physics solver designed to make objects move with a more animated, “rubber band” effect.\nThe solver works for all types of transforms.\nI originally developed it to improve procedural animations that looked too stiff.\nBeyond procedural animations, it is especially useful in Unity, which does not offer built-in support for wiggly bones.",
+        description: "A physics solver designed to give objects a more animated, “rubber band” style of motion. The solver works with all transform types and was originally developed to improve procedural animations that felt too stiff. Beyond procedural animation, it’s particularly useful in Unity, which does not provide built-in support for wiggly or secondary motion bones.",
         media: [firstOrderDynamics1, firstOrderDynamics2, firstOrderDynamics3]
     },
     {
         title: "Parading Polygons Terrain Editor",
-        description: "I was inspired by some blogs discussing tileset generation in 2D using the marching squares algorithm, and I wondered if I could extend this concept into 3D. That led me to experiment with marching cubes a standard method for voxel terrain generation, but it didn’t quite capture the distinct \"2.5D tileset\" look I wanted. After a lot of experimentation, I developed a separate method for expanding marching squares to the third dimension.\n" +
-            "The formal name would probably be “Marching Non-planar Quadrilaterals,” but I decided to call it Parading Polygons because it has a much nicer ring to it. " +
+        description: "I was inspired by blog posts discussing 2D tileset generation using the marching squares algorithm and wondered whether the concept could be extended into 3D. This led me to experiment with marching cubes, a standard approach for voxel terrain generation, but it didn’t quite capture the distinct “2.5D tileset” look I was aiming for. After extensive experimentation, I developed a separate method for extending marching squares into the third dimension." +
+            "\n" +
+            "The formal name would probably be “Marching Non-planar Quadrilaterals,” but my father told me to call it Parading Polygons because its easier to say. " +
             "\n" +
             "The process was incredibly time consuming and potentially more automatable by someone smarter than me but I am extremely happy with these results.",
         media: [terrain1, terrain2, terrain3]
     },
     {
         title: "Deformable Car Physics",
-        description: "Realtime deformable car physics. I always assumed this would be crazy difficult, and that there had to be a reason the only game company that really had this was Rockstar with GTA. I wont say it was easy, because it took a bit, but the concept is not super complicated. Restricted soft body physics on a lattice linked to the meshes you want to deform. The mesh deformation is driven by the vertex shader",
+        description: "Realtime deformable car physics. I always thought this would be incredibly hard to pull off, and that there must be a reason it’s mostly seen in games like GTA. It definitely wasn’t trivial and took a fair amount of experimentation, but the core idea turned out to be simpler than expected: restricted soft-body physics running on a lattice tied to the meshes, with deformation handled in the vertex shader.",
         media: [carDeform, carDeformPic1, carDeformPic2]
     },
     {
         title: "Realistic Car Physics",
-        description: "I play a lot of indie games, and one thing that stands out is how janky the cars often feel compared to AAA titles if the game isnt centered around driving. I made this because I wanted to understand how difficult it is to develop a system that feels good to drive.\nThis system allows for FWD, RWD, or AWD, with physics calculated per wheel based on suspension, traction, and acceleration. The simulation also includes procedurally animated suspension.\nI am currently working on an engine simulation to make acceleration feel more realistic, rather than an immediate and constant."
+        description: "I play a lot of indie games, and one thing that often stands out is how janky vehicle handling can feel compared to AAA titles, especially when driving isn’t the core focus of the game. I built this system to better understand how difficult it is to create car physics that actually feel good to drive." +
+            "\n" +
+            "The system supports FWD, RWD, and AWD configurations, with per-wheel physics based on suspension, traction, and acceleration. It also includes procedurally animated suspension. I’m currently working on an engine simulation to make acceleration feel more realistic, rather than immediate and constant."
     }
 ];
