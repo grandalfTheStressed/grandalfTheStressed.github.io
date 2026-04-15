@@ -8,7 +8,6 @@ import firstOrderDynamics1 from "../img/FirstOrderDynamics (1).gif"
 import firstOrderDynamics2 from "../img/FirstOrderDynamics (2).gif"
 import firstOrderDynamics3 from "../img/FirstOrderDynamics (3).gif"
 
-
 export type Project = {
     title: string;
     description: string;
@@ -18,27 +17,21 @@ export type Project = {
 export const projects: Project[] = [
     {
         title: "Second Order Dynamics",
-        description: "A physics solver designed to give objects a more animated, “rubber band” style of motion. The solver works with all transform types and was originally developed to improve procedural animations that felt too stiff. Beyond procedural animation, it’s particularly useful in Unity, which does not provide built-in support for wiggly or secondary motion bones.",
+        description: "A physics solver that gives transforms a springy, animated quality.\nI built it originally to loosen up procedural animations that felt too rigid. It also fills a gap in Unity, which has no native support for wiggly bones.",
         media: [firstOrderDynamics1, firstOrderDynamics2, firstOrderDynamics3]
     },
     {
         title: "Parading Polygons Terrain Editor",
-        description: "I was inspired by blog posts discussing 2D tileset generation using the marching squares algorithm and wondered whether the concept could be extended into 3D. This led me to experiment with marching cubes, a standard approach for voxel terrain generation, but it didn’t quite capture the distinct “2.5D tileset” look I was aiming for. After extensive experimentation, I developed a separate method for extending marching squares into the third dimension." +
-            "\n" +
-            "The formal name would probably be “Marching Non-planar Quadrilaterals,” but my father told me to call it Parading Polygons because its easier to say. " +
-            "\n" +
-            "The process was incredibly time consuming and potentially more automatable by someone smarter than me but I am extremely happy with these results.",
+        description: "Started as curiosity about whether marching squares could be used in 3D. Usually this leads to marching cubes, but they really arent the same algorithm and they dont generate similar structures, so I ended up developing my own method based off some visuals by a popular youtuber.",
         media: [terrain1, terrain2, terrain3]
     },
     {
         title: "Deformable Car Physics",
-        description: "Realtime deformable car physics. I always thought this would be incredibly hard to pull off, and that there must be a reason it’s mostly seen in games like GTA. It definitely wasn’t trivial and took a fair amount of experimentation, but the core idea turned out to be simpler than expected: restricted soft-body physics running on a lattice tied to the meshes, with deformation handled in the vertex shader.",
+        description: "Realtime deformable car physics. I always assumed this would be crazy difficult, and that there had to be a reason the only game company that really had this was Rockstar with GTA. The concept is not super complicated. Just take a semi high resolution lattice to deform the mesh and then push it around on impact. \nUpon moving to Godot I could not find an existing lattice system so I additionally wrote a custom plugin that deforms the mesh through a compute shader. The lattice deform writes the deformation amount into a custom vertex attribute, which is then used to map paint scratches and glass cracks",
         media: [carDeform, carDeformPic1, carDeformPic2]
     },
     {
         title: "Realistic Car Physics",
-        description: "I play a lot of indie games, and one thing that often stands out is how janky vehicle handling can feel compared to AAA titles, especially when driving isn’t the core focus of the game. I built this system to better understand how difficult it is to create car physics that actually feel good to drive." +
-            "\n" +
-            "The system supports FWD, RWD, and AWD configurations, with per-wheel physics based on suspension, traction, and acceleration. It also includes procedurally animated suspension. I’m currently working on an engine simulation to make acceleration feel more realistic, rather than immediate and constant."
+        description: "Implemented a custom version of the Pacejka magic formula to simulate tire and suspension physics."
     }
 ];
